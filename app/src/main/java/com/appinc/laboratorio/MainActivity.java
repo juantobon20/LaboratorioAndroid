@@ -62,7 +62,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Toast.makeText(this, "Guardado", Toast.LENGTH_LONG).show();
-        txtNombre.setText("");
+        limpiar();
         Mostrar();
+    }
+
+    private void limpiar(){
+        txtNombre.setText("");
     }
 }
