@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Laboratorio</string>
+    <string name="nombre">Nombre</string>
+    <string name="guardar">Guardar</string>
 </resources>
