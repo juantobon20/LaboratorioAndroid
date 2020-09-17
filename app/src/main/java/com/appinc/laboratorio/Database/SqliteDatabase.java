@@ -15,9 +15,8 @@ import java.util.List;
 
 public class SqliteDatabase extends SQLiteOpenHelper {
 
-
     public SqliteDatabase(@Nullable Context context) {
-        super(context, "Coco.db", null, 1);
+        super(context, "Coco.db", null, 2);
     }
 
     @Override
@@ -27,6 +26,7 @@ public class SqliteDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
+        sqLiteDatabase.execSQL("ALTER TABLE PERSONA ADD COLUMN Telefono VARCHAR(10)");
     }
 
     public long InsertPerson(ContentValues values) {
