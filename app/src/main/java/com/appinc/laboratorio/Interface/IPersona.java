@@ -6,10 +6,12 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface IPersona {
 
@@ -24,4 +26,7 @@ public interface IPersona {
 
     @PUT("Persona/{id}")
     Call<Persona> UpdateAsync(@Path("id") int id, @Body Persona persona);
+
+    @DELETE("Persona/{id}")
+    Call<Boolean> DeleteAsync(@Path("id") int id);
 }

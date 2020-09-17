@@ -35,4 +35,10 @@ public class PersonaController {
         Response<Persona> response = call.execute();
         return response.body();
     }
+
+    public Boolean DeleteAsync(int id) throws IOException {
+        Call<Boolean> call = connect.IPersona().DeleteAsync(id);
+        Response<Boolean> response = call.execute();
+        return response.body();
+    }
 }

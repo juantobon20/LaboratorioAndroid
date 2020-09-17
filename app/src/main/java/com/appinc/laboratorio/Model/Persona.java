@@ -6,8 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Persona {
 
-    @SerializedName("id")
-    private int Id;
+    private int id;
     @SerializedName("nombre")
     private String Nombre;
     @SerializedName("apellido")
@@ -19,11 +18,11 @@ public class Persona {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        id = id;
     }
 
     public String getNombre() {
@@ -53,6 +52,6 @@ public class Persona {
     @NonNull
     @Override
     public String toString() {
-        return "Id= " + Id + " Nombre= " + Nombre + " Apellido= " + Apellido + " Telefono= " + Telefono;
+        return "Id= " + id + " Nombre= " + Nombre + " Apellido= " + Apellido + " Telefono= " + Telefono;
     }
 }
